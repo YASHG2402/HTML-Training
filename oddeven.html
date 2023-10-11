@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="txtName" placeholder="Enter name" autofocus>
+        <br>
+        <input type="button" id="btnGreet" value="Greet" onclick="btnGreet_click()">
+        <span id="message"></span>
+    </form>
+    <textarea name="define" id="txtbox" cols="30" rows="10" onchange="txtArea1()"></textarea>
+    <input type="button" id="click" value="Click" onclick="txtArea()">
+    <span id="no"></span>
+    <script>
+        function num(a) {
+    if(a % 2 == 0){
+        console.log("Even Number");
+    } else {
+        console.log("Odd Number");
+    }
+}
+num(10);
+
+function btnGreet_click() {
+    var username = document.getElementById("txtName").value;
+    document.getElementById("message").innerText = "<strong>Hello" + username;
+}
+
+function txtArea() {
+    var data = document.getElementById("txtbox").value;
+    if(data=='') {
+        document.getElementById("no").innerHTML = "<br>Textbox needs to be filled";
+        document.getElementById("no").style.color = "red";
+    }else {
+        document.getElementById("no").innerHTML = "<br>Textbox is filled";
+        document.getElementById("no").style.color = "black";
+    }
+}
+function txtArea1() {
+    if(no.value.length == 0) {
+        document.getElementById("no").innerHTML = "<br>Textbox needs to be filled";
+        document.getElementById("no").style.color = "red";
+    }
+}
+    </script>
+</body>
+</html>

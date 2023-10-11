@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = [1,2,3];
+        let b = [4,5];
+        // spread operator ...a
+        let c = [...a,...b];
+        console.log(c);
+
+        // cloning, this is not cloning, both pointer point to same memory
+        let a1 = [1,2,3]
+        let b1 = a1;
+        console.log("a1",a1);
+        console.log("b1",b1);
+        a1.push(6);
+        console.log("a1",a1);
+        console.log("b1",b1);
+
+        //solution
+        let c1 = [...a1];
+        console.log("a1",a1);
+        console.log("c1",c1)
+        a1.push(89);
+        console.log("a1",a1);
+        console.log("c1",c1);
+
+        //merge two javascript object
+        let obj1 = {name:"yash", address:"mumbai"}
+        let obj2 = {state:"mh"}
+        let obj3 = {obj1,obj2}
+        console.log("obj1",obj1)
+        console.log("obj2",obj2)
+        console.log("obj3",obj3)
+
+        obj3 = {...obj1,...obj2}
+        console.log("obj3",obj3)
+    </script>
+</body>
+</html>

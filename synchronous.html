@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // long running slow function
+        function slowFunction() {
+            let ms = 3000;
+            let start = new Date().getTime()
+            let end = start
+            while(end < start + ms) {
+                end = new Date().getTime()
+            }
+        }
+
+        // synchronous code
+        function myFunction() {
+            slowFunction();
+            return 100;
+        }
+        console.log("logic 1")
+        console.log("logic 2")
+        let returnValue = myFunction();
+        console.log("logic 4")
+        console.log("logic 5")
+        console.log(returnValue)
+        console.log(returnValue + 100)
+
+        // asynchronous code
+        function myFunction(callbackfn) {
+            setTimeout(() => {
+                slowFunction();
+                callbackfn(100);
+            }, 1);
+        }
+
+        function callbackdemo(returnValue) {
+            console.log(returnValue);
+            console.log(returnValue + 100);
+        }
+
+        console.log("logic 1")
+        console.log("logic 2")
+        myFunction(callbackdemo)
+        console.log("logic 4")
+        console.log("logic 5")
+
+        function evenNumberCheck(inputValue) {
+            return new Promise((resolve, reject) => {
+                if(inputValue % 2 == 0) {
+                    setTimeout(() => {
+                        resolve("input number " + inputValue + " is even number")
+                    },2);
+                }
+                else {
+                    setTimeout(() => {
+                        reject(inputValue + " is an invalid input")
+                    }, 3);
+                }
+            })
+        }
+        evenNumberCheck(12).then(result => {
+            console.log("result is \n", result)
+        }, result => {
+            console.log("error is \n", result)
+        })
+    </script>
+</body>
+</html>

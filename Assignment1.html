@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        #user {
+            width: 100%;
+            height: 40px;
+            padding-left: 10px;
+        }
+        #submit {
+            width: 100%;
+            height: 45px;
+            background-color: #229D09;
+            color: white;
+            margin-top: 30px;
+            border: 1px solid white;
+        }
+        #submit:hover {
+            background-color: green;
+            font-size: large;
+        }
+        #click {
+            margin-top: 10px;
+        }
+        #reset {
+            background-color: red;
+            color: white;
+            border: 1px solid red;
+            margin-left: 20px;
+            margin-top: 30px;
+            height: 40px;
+            width: 80px;
+        }
+        #reset:hover {
+            border: 1px solid crimson;
+            background-color: crimson;
+            font-size: large;
+        }
+        p {
+            position: absolute;
+            top: 425px;
+            left: 1030px;
+        }
+        .footer {
+            margin-top: 30px;
+            width: 100%;
+            height: 100px;
+            background-color: khaki;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h1>Login Form</h1>
+
+        <div>
+            <h3>Username</h3>
+            <input id="user" type="text" placeholder="Enter Username">
+            <h3>Password</h3>
+            <input id="user" type="password" placeholder="Enter Password">
+            <br>
+            <button type="submit" id="submit">Login</button>
+            <br>
+            <input id="click" type="checkbox" checked>Remember me
+            <br>
+            <div class="footer">
+            <button id="reset" type="reset">Cancel</button>
+            <p>register <a href="/">register?</a> Forgot <a href="/">password?</a></p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

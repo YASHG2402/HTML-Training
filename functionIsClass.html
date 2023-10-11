@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(fname, lname) {
+            this.firstName = fname;
+            this.lastName = lname;
+
+            this.print = function () {
+                console.log(this.firstName + " " + this.lastName)
+            }
+        }
+        var per = new Person("YASH","GAVANANG")
+        console.log(per.print());
+
+        class Employee {
+            constructor(ename,add){
+                this.empName = ename;
+                this.address = add;
+            }
+            print() {
+                console.log(this.empName+" "+this.address)
+            }
+        }
+
+        var emp = new Employee("user1","mumbai")
+    </script>
+</body>
+</html>

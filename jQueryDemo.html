@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <label>Username</label>
+    <input type="text" id ="txtName" placeholder="Enter Username" autofocus>
+    <br>
+    <label>Password</label>
+    <input type="password" id="txtPassword" placeholder="Enter password">
+    <br>
+    <input type="button" value="Get User" id="btn">
+    <span id="span1"></span>
+    </form>
+    <script>
+        $("#btn").click(function() {
+           // alert("clicked")
+           let username = $("#txtName").val();
+           let pwd = $("#txtPassword").val();
+
+           if(username == "admin" && pwd == "123") {
+            $("#span1").html("<h2>Valid User</h2>")
+            $("#span1").css("color","green")
+           }
+           else {
+            $("#span1").text("InValid User")
+            $("#span1").css("color","red")
+           }
+        })
+    </script>
+</body>
+</html>

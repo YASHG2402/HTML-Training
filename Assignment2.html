@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Number 1</label>
+    <input type="text" id="a">
+    <br>
+    <label>Number 2</label>
+    <input type="text" id="b">
+    <br>
+    <button id="res" type="submit">Operations</button>
+    <span id="addition"></span>
+    <script>
+        function addition() {
+            var num1 = document.getElementById("a").value;
+            var num2 = document.getElementById("b").value;
+            var result = parseInt(num1) + parseInt(num2);
+            document.getElementById("addition").innerText = "\nAddition: " + result;
+        }
+        function subtraction() {
+            var num1 = document.getElementById("a").value;
+            var num2 = document.getElementById("b").value;
+            var result1 = parseInt(num1) - parseInt(num2);
+            document.getElementById("addition").innerText = "\nSubtraction: " + result1;
+        }
+        function multiplication() {
+            var num1 = document.getElementById("a").value;
+            var num2 = document.getElementById("b").value;
+            var result2 = parseInt(num1) * parseInt(num2);
+            document.getElementById("addition").innerText = "\nMultiplication: " + result2;
+        }
+        function division() {
+            var num1 = document.getElementById("a").value;
+            var num2 = document.getElementById("b").value;
+            var result3 = parseInt(num1) / parseInt(num2);
+            document.getElementById("addition").innerText = "\nDivision: " + result3;
+        }
+        const btn = document.getElementById("res");
+        btn.addEventListener('click',addition);
+        btn.addEventListener('click',subtraction);
+        btn.addEventListener('click',multiplication);
+        btn.addEventListener('click',division);
+        let myname = "yash";
+        let address = "andheri";
+        console.log("my name is " + myname + "  and address is " + address);
+        // string interpolation
+        console.log(`my name is ${myname} and address is ${address}`) 
+    </script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <style>
+        * {
+            background-color: lightgoldenrodyellow;
+        }
+        input:hover {
+            background-color: darkolivegreen;
+        }
+        td:hover{
+            color: blueviolet;
+        }
+        button:hover{
+            background-color: darkkhaki;
+        }
+        textArea {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+    <h2>Form Demo</h2>
+    <table>
+        <tr>
+            <td><label>FirstName:- </label></td>
+            <td>
+                <input type="text" placeholder="FirstName" title="FirstName" autofocus required pattern="\S[A-K]{2,5}" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>UserId:- </label>
+            </td>
+            <td>
+                <input type="text" autofocus>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Password: </label>
+            </td>
+            <td>
+                <input type="password" minlength="5" maxlength="10">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>TextArea: </label>
+            </td>
+            <td>
+                <textarea name="info" cols="30" rows="5"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Email: </label>
+            </td>
+            <td>
+                <input type="email" autocomplete="on">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>URL: </label>
+            </td>
+            <td>
+                <input type="url">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Address</label>
+            </td>
+            <td>
+                <textarea cols="30" rows="5"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Range: </label>
+            </td>
+            <td>
+                <input type="range" min="0" max="10" value="5" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Gender: </label>
+            </td>
+            <td>
+                <input type="radio" value="male" name="gender" />Male 
+                <input type="radio" value="female" name="gender" />Female
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Hobby: </label>
+            </td>
+            <td>
+                <input type="checkbox" value="reading" />Reading
+                <input type="checkbox" value="music" />Music
+                <input type="checkbox" value="sport" />Sports
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Birth Date: </label>
+            </td>
+            <td>
+                <input type="date" min="2021-01-01" max="2021-12-31">
+                <input type="time" min="2021-01-01" max="2021-12-31">
+                <input type="week" min="2021-01-01" max="2021-12-31">
+                <input type="datetime" min="2021-01-01" max="2021-12-31">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Country</label>
+            </td>
+            <td>
+                <select>
+                    <option>Select</option>
+                    <option value="jp">Japan</option>
+                    <option value="USA">USA</option>
+                    <option value="UAE">UAE</option>
+                </select>
+                <select>
+                    <option>Select</option>
+                    <optgroup label="Asia"></optgroup>
+                    <option value="jp">Japan</option>
+                    <option value="UAE">UAE</option>
+                    <optgroup label="Europe"></optgroup>
+                    <option value="Germany">Germany</option>
+                    <option value="Spain">Spain</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Payment Mode: </label>
+            </td>
+            <td>
+                <input type="text" list="paymentmode" />
+                <datalist id="paymentmode">
+                    <option value="Credit Card">cc</option>
+                    <option value="Debit Card">dc</option>
+                </datalist>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Search: </label>
+            </td>
+            <td>
+                <input type="search"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Save" />
+                <input type="reset" value="Clear" />
+                <input type="button" value="Client-Side Button" />
+                <br/>
+                <button type="button">Button</button>
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
